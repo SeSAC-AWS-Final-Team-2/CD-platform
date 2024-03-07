@@ -14,7 +14,7 @@ spec:
         app: k-food
     spec:
       containers:
-      - image: 992382692054.dkr.ecr.ap-northeast-2.amazonaws.com/k-food-app:6
+      - image: 211125558772.dkr.ecr.ca-central-1.amazonaws.com/k-food-app:7
         name: container-k-food
         ports:
         - containerPort: 8080
