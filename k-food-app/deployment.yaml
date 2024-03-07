@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: guestbook-ui
+  name: deploy-k-food
 spec:
   replicas: 3
-  revisionHistoryLimit: 3
+  revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: guestbook-ui
+      app: k-food
   template:
     metadata:
       labels:
-        app: guestbook-ui
+        app: k-food
     spec:
       containers:
-      - image: 211125558772.dkr.ecr.ca-central-1.amazonaws.com/k-food-app:7
-        name: guestbook-ui
+      - image: 992382692054.dkr.ecr.ap-northeast-2.amazonaws.com/k-food-app:6
+        name: container-k-food
         ports:
         - containerPort: 8080
