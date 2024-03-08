@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-k-food
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: deploy-k-food
+  template:
+    metadata:
+      labels:
+        app: deploy-k-food
+    spec:
+      containers:
+      - name: k-food-container
+        image: 992382692054.dkr.ecr.ap-northeast-2.amazonaws.com/k-food-app:latest
+        imagePullPolicy: Always
