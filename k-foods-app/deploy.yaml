@@ -15,5 +15,5 @@ spec:
     spec:
       containers:
       - name: deploy-k-food
-        image: happylivekkb/k-food:latest
+        image: 992382692054.dkr.ecr.ap-northeast-2.amazonaws.com/k-food-app:latest
         imagePullPolicy: Always
