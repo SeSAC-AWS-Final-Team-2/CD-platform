@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web-site-deployment
+  name: deploy-k-food
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: web-site-deployment
+      app: deploy-k-food
   template:
     metadata:
-      name: web-site-deployment
+      name: deploy-k-food
       labels:
-        app: web-site-deployment
+        app: deploy-k-food
     spec:
       containers:
-      - name: web-site-deployment-container
+      - name: deploy-k-food
         image: happylivekkb/k-food:latest
         imagePullPolicy: Always
