@@ -3,10 +3,10 @@ kind: Pod
 metadata:
   name: fe-deploy
   labels:
-    app: fe-pod
+    app: fe-deploy
 spec:
   containers:
-  - name: fe-pod
+  - name: fe-deploy
     image: 34.64.204.32:5000/nginx:latest
     ports:
     - containerPort: 
@@ -18,8 +18,8 @@ metadata:
 spec:
   type: ClusterIP
   selector:
-    app: be-pod
+    app: fe-deploy
   ports:
   - protocol: TCP
-    port: 8888
+    port: 8080
     targetPort:
