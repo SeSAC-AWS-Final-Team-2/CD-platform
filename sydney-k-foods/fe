@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: frontend-ingress
-  namespace: frontend
+  namespace: backend
   annotations:
     alb.ingress.kubernetes.io/controller: "true"
     alb.ingress.kubernetes.io/target-type: ip
