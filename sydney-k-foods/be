@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: 992382692054.dkr.ecr.ap-northeast-2.amazonaws.com/k-food-app:latest
+        image: 992382692054.dkr.ecr.ap-northeast-2.amazonaws.com/k-food-app:13
         ports:
         - containerPort: 80
 ---
