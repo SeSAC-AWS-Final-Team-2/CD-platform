@@ -8,8 +8,8 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/group.name: front-ingress-group
-    external-dns.alpha.kubernetes.io/hostname: kr.yongdev.shop
-    external-dns.alpha.kubernetes.io/aws-geolocation-country-code: KR
+    external-dns.alpha.kubernetes.io/hostname: au.yongdev.shop
+    external-dns.alpha.kubernetes.io/aws-geolocation-country-code: AU
     external-dns.alpha.kubernetes.io/set-identifier: Z03832133444X1HL472UP
 spec:
   ingressClassName: alb
