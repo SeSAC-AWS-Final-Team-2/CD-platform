@@ -39,4 +39,5 @@ spec:
     protocol: TCP
     port: 9090
     targetPort: 9090
+  clusterIP: 10.100.200.2
 
