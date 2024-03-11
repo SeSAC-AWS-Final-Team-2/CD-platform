@@ -66,3 +66,4 @@ spec:
     protocol: TCP
     port: 443
     targetPort: 443
+  clusterIP: 172.20.200.1
