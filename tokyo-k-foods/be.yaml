@@ -1,3 +1,31 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: backend-ingress
+  namespace: backend
+  annotations:
+    alb.ingress.kubernetes.io/controller: "true"
+    alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/group.name: backend-ingress-group
+    external-dns.alpha.kubernetes.io/hostname: backend.jp.yongdev.shop
+    external-dns.alpha.kubernetes.io/aws-geolocation-country-code: JP
+    external-dns.alpha.kubernetes.io/set-identifier: Z03832133444X1HL472UP
+spec:
+  ingressClassName: alb
+  rules:
+  - host:
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: backend
+            port:
+              number: 80
+---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -18,7 +46,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: 992382692054.dkr.ecr.ap-northeast-2.amazonaws.com/backend-prod-tokyo:latest
+        image: 992382692054.dkr.ecr.ap-northeast-2.amazonaws.com/backend-pre-tokyo:latest
         ports:
         - containerPort: 80
 ---

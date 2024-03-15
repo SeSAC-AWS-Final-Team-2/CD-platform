@@ -45,7 +45,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: 992382692054.dkr.ecr.ap-northeast-2.amazonaws.com/k-food-front-app:latest
+        image: 992382692054.dkr.ecr.ap-northeast-2.amazonaws.com/frontend-pre-tokyo
         ports:
         - containerPort: 80
 ---
