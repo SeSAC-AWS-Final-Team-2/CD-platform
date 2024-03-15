@@ -24,6 +24,14 @@ spec:
             name: backend
             port:
               number: 80
+              paths:
+      - pathType: Prefix
+        path: /monitor
+        backend:
+          service:
+            name: backend
+            port:
+              number: 9090
 ---
 
 apiVersion: apps/v1
