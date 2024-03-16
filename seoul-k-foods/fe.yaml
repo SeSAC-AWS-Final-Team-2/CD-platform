@@ -34,7 +34,7 @@ metadata:
     app: frontend
 spec:
   replicas: 3
-  revisionHistoryLimit: 2
+  revisionHistoryLimit: 1
   selector:
     matchLabels:
       app: frontend
@@ -45,7 +45,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: 992382692054.dkr.ecr.ap-northeast-2.amazonaws.com/frontend-pro-seoul:latest
+        image: 992382692054.dkr.ecr.ap-northeast-2.amazonaws.com/frontend-pre-seoul:10
         ports:
         - containerPort: 80
 ---
