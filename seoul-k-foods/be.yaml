@@ -8,9 +8,9 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/group.name: backend-ingress-group
-    external-dns.alpha.kubernetes.io/hostname: backend.kr.yongdev.shop
+    external-dns.alpha.kubernetes.io/hostname: $HOSTNAME
     external-dns.alpha.kubernetes.io/aws-geolocation-country-code: KR
-    external-dns.alpha.kubernetes.io/set-identifier: Z03832133444X1HL472UP
+    external-dns.alpha.kubernetes.io/set-identifier: $IDENTIFIER
 spec:
   ingressClassName: alb
   rules:
@@ -54,7 +54,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: 992382692054.dkr.ecr.ap-northeast-2.amazonaws.com/backend-pre-seoul:latest
+        image: $BACKEND_IMAGE
         ports:
         - containerPort: 8080
 ---
@@ -76,5 +76,5 @@ spec:
     protocol: TCP
     port: 9090
     targetPort: 9090
-  clusterIP: 10.100.200.2
+  clusterIP: $CLUSTER_IP
 
