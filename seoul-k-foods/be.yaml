@@ -54,7 +54,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: $BACKEND_IMAGE
+        image: $BACKEND_AMI
         ports:
         - containerPort: 8080
 ---
